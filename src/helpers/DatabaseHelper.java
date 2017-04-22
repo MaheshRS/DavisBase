@@ -1,6 +1,6 @@
 package helpers;
 
-import Model.*;
+import model.*;
 import common.Constants;
 import common.Utils;
 import queries.*;

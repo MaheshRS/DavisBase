@@ -1,6 +1,6 @@
 package queries;
 
-import Model.*;
+import model.*;
 import common.Constants;
 import common.Utils;
 import datatypes.*;
@@ -112,7 +112,7 @@ public class InsertQuery implements IQuery {
 
 
             // PRIMARY KEY CONSTRAINT
-            boolean isPrimaryKeyConstraintValid = checkPrimaryKeyConstraint(manager, retrievedColumns);
+            boolean isPrimaryKeyConstraintValid = Utils.checkPrimaryKeyConstraint(this.databaseName, this.tableName, manager, retrievedColumns, columns, values);
             if (!isPrimaryKeyConstraintValid) {
                 return false;
             }
@@ -169,28 +169,6 @@ public class InsertQuery implements IQuery {
 
         if (!manager.checkNullConstraint(this.databaseName, tableName, columnsList)) {
             return false;
-        }
-
-        return true;
-    }
-
-    private boolean checkPrimaryKeyConstraint(StorageManager manager, List<String> retrievedColumnNames) throws InternalException {
-
-        String primaryKeyColumnName = manager.getTablePrimaryKey(databaseName, tableName);
-        List<String> columnList = (columns != null) ? columns : retrievedColumnNames;
-
-        if (primaryKeyColumnName.length() > 0) {
-                if (columnList.contains(primaryKeyColumnName.toLowerCase())) {
-                    // The primary key is present.
-                    // Check if the same primary key with same value is present.
-                    int primaryKeyIndex = columnList.indexOf(primaryKeyColumnName);
-                    if (!manager.checkIfValueForPrimaryKeyExists(this.databaseName, tableName, Integer.parseInt(values.get(primaryKeyIndex).value))) {
-                        // Primary key does not exist.
-                    } else {
-                        Utils.printError("Duplicate entry '" + values.get(primaryKeyIndex).value + "' for key 'PRIMARY'");
-                        return false;
-                    }
-                }
         }
 
         return true;

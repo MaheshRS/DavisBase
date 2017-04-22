@@ -10,4 +10,4 @@ export CLASSPATH=./output:./lib/json-simple.jar
 #-Xlint:unchecked -Xlint:-deprecation
 javac -classpath $CLASSPATH -d ./output ./*/*/*.java
 
-java Main.UserPrompt
+java main.UserPrompt

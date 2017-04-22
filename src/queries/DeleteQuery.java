@@ -1,8 +1,8 @@
 package queries;
 
-import Model.Condition;
-import Model.IQuery;
-import Model.Result;
+import model.Condition;
+import model.IQuery;
+import model.Result;
 import common.Utils;
 import datatypes.DT;
 import errors.InternalException;

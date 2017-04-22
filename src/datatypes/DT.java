@@ -1,6 +1,6 @@
 package datatypes;
 
-import Model.Literal;
+import model.Literal;
 import common.Constants;
 import common.Utils;
 

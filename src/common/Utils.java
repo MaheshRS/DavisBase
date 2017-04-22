@@ -1,11 +1,13 @@
 package common;
 
-import Model.Condition;
-import Model.DataType;
-import Model.Literal;
-import Model.Operator;
+import errors.InternalException;
+import model.Condition;
+import model.DataType;
+import model.Literal;
+import model.Operator;
 import datatypes.*;
 import datatypes.DT_Numeric;
+import storage.StorageManager;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -14,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -367,5 +370,27 @@ public class Utils {
         }
 
         return false;
+    }
+
+    public static boolean checkPrimaryKeyConstraint(String databaseName, String tableName, StorageManager manager, List<String> retrievedColumnNames, List<String> columns, ArrayList<Literal> values) throws InternalException {
+
+        String primaryKeyColumnName = manager.getTablePrimaryKey(databaseName, tableName);
+        List<String> columnList = (columns != null) ? columns : retrievedColumnNames;
+
+        if (primaryKeyColumnName.length() > 0) {
+            if (columnList.contains(primaryKeyColumnName.toLowerCase())) {
+                // The primary key is present.
+                // Check if the same primary key with same value is present.
+                int primaryKeyIndex = columnList.indexOf(primaryKeyColumnName);
+                if (!manager.checkIfValueForPrimaryKeyExists(databaseName, tableName, Integer.parseInt(values.get(primaryKeyIndex).value))) {
+                    // Primary key does not exist.
+                } else {
+                    Utils.printError("Duplicate entry '" + values.get(primaryKeyIndex).value + "' for key 'PRIMARY'");
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }

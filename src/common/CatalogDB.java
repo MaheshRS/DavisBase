@@ -1,6 +1,6 @@
 package common;
 
-import Model.DataType;
+import model.DataType;
 import errors.InternalException;
 import helpers.UpdateStatementHelper;
 import storage.StorageManager;

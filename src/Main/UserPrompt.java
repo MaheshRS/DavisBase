@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Model.IQuery;
+import model.IQuery;
 import helpers.DatabaseHelper;
 import common.CatalogDB;
 import common.Constants;

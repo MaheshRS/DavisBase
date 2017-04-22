@@ -1,8 +1,8 @@
 package queries;
 
-import Model.Column;
-import Model.IQuery;
-import Model.Result;
+import model.Column;
+import model.IQuery;
+import model.Result;
 import common.Constants;
 import common.Utils;
 import errors.InternalException;

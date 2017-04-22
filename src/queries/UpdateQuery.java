@@ -1,9 +1,9 @@
 package queries;
 
-import Model.Condition;
-import Model.IQuery;
-import Model.Literal;
-import Model.Result;
+import model.Condition;
+import model.IQuery;
+import model.Literal;
+import model.Result;
 import common.Utils;
 import datatypes.DT;
 import errors.InternalException;
@@ -19,7 +19,7 @@ import java.util.List;
 public class UpdateQuery implements IQuery {
     public String databaseName;
     public String tableName;
-    public String columnName;
+    private String columnName;
     public Literal value;
     public Condition condition;
 
@@ -48,7 +48,7 @@ public class UpdateQuery implements IQuery {
             List<String> retrievedColumns = manager.fetchAllTableColumns(this.databaseName, tableName);
             List<Byte> searchColumnsIndexList = getSearchColumnsIndexList(retrievedColumns);
             List<Object> searchKeysValueList = getSearchKeysValueList(columnDataTypeMapping);
-            List<Short> searchKeysConditionsList = getSearchKeysConditionsList(retrievedColumns);
+            List<Short> searchKeysConditionsList = getSearchKeysConditionsList();
             List<Byte> updateColumnIndexList = getUpdateColumnIndexList(retrievedColumns);
             List<Object> updateColumnValueList = getUpdateColumnValueList(columnDataTypeMapping);
 
@@ -90,7 +90,6 @@ public class UpdateQuery implements IQuery {
                     return false;
                 }
 
-                return true;
             } else {
                 // Validate the column in the condition.
                 // Validate the existence of the column. (Condition Column)
@@ -200,7 +199,7 @@ public class UpdateQuery implements IQuery {
         return list;
     }
 
-    private List<Short> getSearchKeysConditionsList(List<String>retrievedList) {
+    private List<Short> getSearchKeysConditionsList() {
         List<Short> list = new ArrayList<>();
         if (condition != null) {
             list.add(Utils.ConvertFromOperator(condition.operator));

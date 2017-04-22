@@ -64,7 +64,7 @@ There is one script available:
           b. Note: Recompile with -Xlint:unchecked for details.)
 
       # Run the 'UserPrompt' class
-      6.  java Main.UserPrompt
+      6.  java main.UserPrompt
 
 
 
@@ -164,8 +164,15 @@ THE FOLLOWING EXTRA COMMANDS ARE IMPLEMENTED
 
   a. All queries are CASEINSENSITIVE.
 
-  b. Only data types mentioned in the requirements are supported.
+  b. All data is converted to lower case.
 
-  c. Some time the systems misses data in the system catalog tables and columns. In this case the database may behave abruptly. SHOULD THE NEED ARISE PLEASE DELETED THE 'data' FOLDER COMPLETELY LOCATED IN THE FOLDER 'Davisbase' i.e. 'Davisbase/data'.
+  c. Only data types mentioned in the requirements are supported.
 
+  d. The DATE and DATETIME must be inserted in the format 'YYYY-MM-DD' and 'YYYY-MM-DD hh:mm:ss' respectively.
+
+  e. The update query updates the primary key and might result in integrity constraint (known bug).
+
+  f. NULL literals are not supported for DML queries.
+
+  (* In this case the database behaves abruptl, SHOULD THE NEED ARISE PLEASE DELETED THE 'data' FOLDER COMPLETELY LOCATED IN THE FOLDER 'Davisbase' i.e. 'Davisbase/data' and restart the database engine.)
 

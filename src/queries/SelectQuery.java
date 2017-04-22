@@ -1,6 +1,6 @@
 package queries;
 
-import Model.*;
+import model.*;
 import common.CatalogDB;
 import common.Constants;
 import common.Utils;
