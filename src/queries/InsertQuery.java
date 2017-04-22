@@ -4,10 +4,10 @@ import Model.*;
 import common.Constants;
 import common.Utils;
 import datatypes.*;
-import datatypes.base.DT;
+import datatypes.DT;
 import errors.InternalException;
 import storage.StorageManager;
-import storage.model.DataRecord;
+import internal.DataRecord;
 import java.util.*;
 
 public class InsertQuery implements IQuery {

@@ -1,4 +1,4 @@
-package datatypes.base;
+package datatypes;
 
 /**
  * Created by Mahesh on 13/4/17.

@@ -7,10 +7,10 @@ import datatypes.DT_Int;
 import datatypes.DT_Text;
 import errors.InternalException;
 import storage.StorageManager;
-import storage.model.DataRecord;
-import storage.model.InternalColumn;
-import storage.model.InternalCondition;
-import storage.model.Page;
+import internal.DataRecord;
+import internal.InternalColumn;
+import internal.InternalCondition;
+import internal.Page;
 
 import java.util.ArrayList;
 import java.util.List;

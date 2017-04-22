@@ -1,9 +1,8 @@
-package datatypes.base;
+package datatypes;
 
 import Model.Literal;
 import common.Constants;
 import common.Utils;
-import datatypes.*;
 
 /**
  * Created by Mahesh on 13/4/17.

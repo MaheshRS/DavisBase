@@ -3,7 +3,7 @@ package Model;
 import QueryParser.DatabaseHelper;
 import common.Constants;
 import common.Utils;
-import datatypes.base.DT;
+import datatypes.DT;
 
 /**
  * Created by Mahesh on 15/4/17.

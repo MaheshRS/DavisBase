@@ -5,7 +5,7 @@ import Model.DataType;
 import Model.Literal;
 import Model.Operator;
 import datatypes.*;
-import datatypes.base.DT_Numeric;
+import datatypes.DT_Numeric;
 
 import java.io.File;
 import java.text.DateFormat;

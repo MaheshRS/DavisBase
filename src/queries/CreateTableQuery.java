@@ -8,7 +8,7 @@ import common.Utils;
 import errors.InternalException;
 import helpers.UpdateStatementHelper;
 import storage.StorageManager;
-import storage.model.InternalColumn;
+import internal.InternalColumn;
 
 import java.util.ArrayList;
 import java.util.HashMap;

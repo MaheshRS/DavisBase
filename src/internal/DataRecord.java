@@ -1,4 +1,4 @@
-package storage.model;
+package internal;
 
 import common.Constants;
 import common.Utils;

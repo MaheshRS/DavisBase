@@ -1,3 +1,5 @@
+package Main;
+
 import Model.IQuery;
 import QueryParser.DatabaseHelper;
 import common.CatalogDB;

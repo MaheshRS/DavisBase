@@ -1,7 +1,6 @@
 package datatypes;
 
 import common.Constants;
-import datatypes.base.DT_Numeric;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

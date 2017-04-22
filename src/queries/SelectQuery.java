@@ -5,11 +5,11 @@ import common.CatalogDB;
 import common.Constants;
 import common.Utils;
 import datatypes.DT_Text;
-import datatypes.base.DT;
+import datatypes.DT;
 import javafx.util.Pair;
 import storage.StorageManager;
-import storage.model.DataRecord;
-import storage.model.InternalCondition;
+import internal.DataRecord;
+import internal.InternalCondition;
 
 import java.util.ArrayList;
 import java.util.HashMap;

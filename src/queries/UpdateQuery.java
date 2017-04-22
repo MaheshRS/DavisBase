@@ -5,7 +5,7 @@ import Model.IQuery;
 import Model.Literal;
 import Model.Result;
 import common.Utils;
-import datatypes.base.DT;
+import datatypes.DT;
 import errors.InternalException;
 import storage.StorageManager;
 import java.util.ArrayList;
