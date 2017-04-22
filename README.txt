@@ -105,9 +105,13 @@ The following COMMANDS are AVAILABLE in the database:
 
   15. EXIT or QUIT;                                    Exit the program
 
+
+
 ------------------------------------------------------
 ===== MORE COMMANDS (NOT IN THE REQUIREMENTS) =====
 ------------------------------------------------------
+THE FOLLOWING EXTRA COMMANDS ARE IMPLEMENTED
+
 1.  USE DATABASE database_name;                      Changes current database.
 
 2.  SHOW DATABASES;                                  Displays all databases.
@@ -117,6 +121,8 @@ The following COMMANDS are AVAILABLE in the database:
 4.  DESC|DESCRIBE table_name;                        Displays table schema.
 
 5.  CREATE DATABASE database_name;                   Creates an empty database.
+
+
 
 ----------------------------------------------------------
 ===== Implementation Details and KNOWN SYSTEM BUGS=====
