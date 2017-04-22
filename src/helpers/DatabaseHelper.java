@@ -1,4 +1,4 @@
-package QueryParser;
+package helpers;
 
 import Model.*;
 import common.Constants;
@@ -36,7 +36,7 @@ public class DatabaseHelper {
 
     public static String CurrentDatabaseName = "";
     public static String prompt = "davisql> ";
-    private static String version = "v1.0b";
+    private static String version = "v1.0";
     private static String copyright = "©2017 Mahesh Shanbhag";
 
     public static IQuery ShowTableListQueryHandler() {

@@ -1,7 +1,7 @@
 package Main;
 
 import Model.IQuery;
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 import common.CatalogDB;
 import common.Constants;
 
@@ -247,12 +247,12 @@ public class UserPrompt {
 
             int openBracketIndex = userCommand.toLowerCase().indexOf("(");
             if(openBracketIndex == -1) {
-                QueryParser.DatabaseHelper.UnrecognisedCommand(userCommand, "Expected (");
+                DatabaseHelper.UnrecognisedCommand(userCommand, "Expected (");
                 return;
             }
 
             if(!userCommand.endsWith(")")){
-                QueryParser.DatabaseHelper.UnrecognisedCommand(userCommand, "Missing )");
+                DatabaseHelper.UnrecognisedCommand(userCommand, "Missing )");
                 return;
             }
 

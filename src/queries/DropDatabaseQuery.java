@@ -3,7 +3,7 @@ package queries;
 import Model.Condition;
 import Model.IQuery;
 import Model.Result;
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 import common.Constants;
 import common.Utils;
 

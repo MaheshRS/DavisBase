@@ -2,7 +2,7 @@ package queries;
 
 import Model.IQuery;
 import Model.Result;
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 import common.Utils;
 
 /**

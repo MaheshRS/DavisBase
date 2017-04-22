@@ -4,7 +4,7 @@ import Model.Condition;
 import Model.IQuery;
 import Model.Result;
 import Model.ResultSet;
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 import common.Constants;
 import common.Utils;
 

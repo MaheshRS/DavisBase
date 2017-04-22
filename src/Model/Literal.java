@@ -1,6 +1,6 @@
 package Model;
 
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 import common.Constants;
 import common.Utils;
 import datatypes.DT;

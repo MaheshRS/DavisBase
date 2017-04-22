@@ -1,6 +1,6 @@
 package Model;
 
-import QueryParser.DatabaseHelper;
+import helpers.DatabaseHelper;
 
 /**
  * Created by Mahesh on 15/4/17.
